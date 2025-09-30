@@ -4,10 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-"run":"node index.js",
-"test": "node test.js"  
+    "run": "node index.js",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^30.2.0"
+  }
 }
