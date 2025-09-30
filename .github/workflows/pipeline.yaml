@@ -20,5 +20,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Configuration des permissions npm
+        run: |
+          npm config set user 0
+          npm config set unsafe-perm true
+
       - name: Run tests
-        run: npx --no-install jest
+        run: npx jest
