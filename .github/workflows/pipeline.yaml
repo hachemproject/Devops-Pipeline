@@ -20,10 +20,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Configuration des permissions npm
-        run: |
-          npm config set user 0
-          npm config set unsafe-perm true
+        name: Correction des permissions pour node_modules
+        run: chmod -R a+x ./node_modules/.bin/
 
-      - name: Run tests
+      - name: Exécution des tests
         run: npx jest
+
+     
